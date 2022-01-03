@@ -12,17 +12,17 @@
 
     <a-assets>
       <a-asset-item id="scene-obj" src="cabbagemodel/scene.gltf"></a-asset-item>
-      <img id="image1" src="images/image1.jpeg" />
-      <img id="image2" src="images/image2.jpeg" />
+      <img id="image1" src="image/image1.jpeg" />
+      <img id="image2" src="image/image2.jpeg" />
     </a-assets>
     
     <!-- a-markerのtypeにpatternを設定, 作ったpattファイルをurlにを指定 -->
     <a-marker type="pattern" url="pattern-QR.patt">
       <a-entity gltf-model="#scene-obj" position="0 0 0" rotation="0 0 0" scale="0.01 0.01 0.01">
+        <a-image src="#image1" width="2" height="2" rotation="-90 0 0"></a-image>
+        <a-image src="#image2" width="2" height="2" rotation="-90 0 0"></a-image>
+        <a-animation attribute="rotation" to="0 360 0" dur="4000" repeat="indefinite" easing="linear"></a-animation>
       </a-entity>
-      <a-image src="#image1" width="2" height="2" rotation="-90 0 0"></a-image>
-      <a-image src="#image2" width="2" height="2" rotation="-90 0 0"></a-image>
-      <a-animation attribute="rotation" to="0 360 0" dur="4000" repeat="indefinite" easing="linear"></a-animation>
     </a-marker>
     
     <a-entity camera></a-entity>
