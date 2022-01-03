@@ -8,8 +8,8 @@
 <body style="margin : 0px; overflow: hidden">
   
   <!-- AR.jsのデバックとA-FrameのVRボタンを非表示 -->
-  <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false">
-    
+  <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
+
     <a-assets>
       <a-asset-item id="scene-obj" src="cabbagemodel/scene.gltf"></a-asset-item>
     </a-assets>
@@ -18,6 +18,8 @@
     <a-marker type="pattern" url="pattern-QR.patt">
       <a-entity gltf-model="#scene-obj" position="0 0 0" rotation="0 0 0" scale="0.01 0.01 0.01">
       </a-entity>
+      <a-image src="#syoumi_kigen" width="2" height="2" rotation="-90 0 0"></a-image>
+      <a-animation attribute="rotation" to="0 360 0" dur="4000" repeat="indefinite" easing="linear"></a-animation>
     </a-marker>
     
     <a-entity camera></a-entity>
