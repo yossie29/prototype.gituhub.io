@@ -11,22 +11,21 @@ t<!DOCTYPE html>
   <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
 
     <a-assets>
-      <a-asset-item id="scene-obj" src="cabbagemodel/scene.gltf"></a-asset-item>
       <img id="image1" src="image/image1.jpeg">
+      <a-asset-item id="scene-obj" src="cabbagemodel/scene.gltf"></a-asset-item>
     </a-assets>
     
     <!-- a-markerのtypeにpatternを設定, 作ったpattファイルをurlにを指定 -->
     <a-marker type="pattern" url="pattern-QR.patt">
       <a-entity gltf-model="#scene-obj" position="0 0 0" rotation="0 0 0" scale="0.01 0.01 0.01"></a-entity>
       <a-entity>
-        <a-image src="#image1" width="2" height="2" rotation="-90 0 0"></a-image>
+        <a-image src="#image1" width="2" height="2" position="0 0 0" rotation="-90 0 0"></a-image>
         <a-animation attribute="rotation" to="0 360 0" dur="4000" repeat="indefinite" easing="linear"></a-animation>
       </a-entity>
     </a-marker>
-    
     <a-entity camera></a-entity>
-    
   </a-scene>
+  
 </body>
 
 </html>
