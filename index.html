@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+t<!DOCTYPE html>
 <head>
   <!-- ① スクリプトの読み込み -->
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -12,14 +12,14 @@
 
     <a-assets>
       <a-asset-item id="scene-obj" src="cabbagemodel/scene.gltf"></a-asset-item>
-      <img id="image1" src="image/image1.jpeg">
+      <img id="text1" src="text1.png">
     </a-assets>
     
     <!-- a-markerのtypeにpatternを設定, 作ったpattファイルをurlにを指定 -->
     <a-marker type="pattern" url="pattern-QR.patt">
       <a-entity gltf-model="#scene-obj" position="0 0 0" rotation="0 0 0" scale="0.01 0.01 0.01"></a-entity>
       <a-entity>
-        <a-image src="#image1" width="2" height="2" rotation="-90 0 0"></a-image>
+        <a-image src="#text1" width="2" height="2" rotation="-90 0 0"></a-image>
         <a-animation attribute="rotation" to="0 360 0" dur="4000" repeat="indefinite" easing="linear"></a-animation>
       </a-entity>
     </a-marker>
