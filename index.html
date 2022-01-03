@@ -10,6 +10,10 @@
   <!-- AR.jsのデバックとA-FrameのVRボタンを非表示 -->
   <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false">
     
+    <a-assets>
+        <a-asset-item id="santa-obj" src="scene.gltf"></a-asset-item>
+    </a-assets>
+    
     <!-- a-markerのtypeにpatternを設定, 作ったpattファイルをurlにを指定 -->
     <a-marker type="pattern" url="pattern-QR.patt">
       <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#f00">
