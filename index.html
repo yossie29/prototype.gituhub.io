@@ -7,10 +7,13 @@
 <body style="margin : 0px; overflow: hidden">
   <!-- AR.jsのデバックとA-FrameのVRボタンを非表示 -->
   <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false">
+    <a-assets>
+      <a-asset-item id="santa-obj" src="scene.gltf"></a-asset-item>
+    </a-assets>
     <!-- a-markerのtypeにpatternを設定, 作ったpattファイルをurlにを指定 -->
     <a-marker type="pattern" url="pattern-QR.patt">
       <!-- 赤い立方体を表示 -->
-      <a-box position="0 0.5 0" width="0.5" height="0.5" depth="0.5" color="red"></a-box>
+      <a-entity gltf-model="#santa-obj" position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.5">
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
